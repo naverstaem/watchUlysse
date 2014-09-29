@@ -94,7 +94,7 @@ input, textarea
 .btn
   display: inline-block
   +border-radius(16px)
-  +background-clip(padding-box)
+  +background-clip(border-box)
   padding: 8px 25px
   color: white
   font-size: 18px
@@ -102,8 +102,8 @@ input, textarea
   text-decoration: underline
   +transition(background, .5s)
   &:hover
-    color: #ffffff
-    background-color: lighten(#13133b, 10%)
+    color: #13133b
+    background-color: lighten(#ffffff, 10%)
 .title
   text-align: center
   font-size: 60px
@@ -219,7 +219,7 @@ input, textarea
 .frm
   height: 250px
   padding-top: 30px
-  background: rgba(#3b3b3b, .4)
+  background: rgba(#c7bdbd, .2)
 
   //box-sizing: border-box
   +box
@@ -318,7 +318,7 @@ form
 
 .button--video
   background: url(../img/button-video_bg.png) no-repeat
-  width: 190px
+  width: 130px
   height: 50px
   +pfl
   font-size: 18px
@@ -326,14 +326,15 @@ form
   text-transform: uppercase
   text-align: center
   padding-top: 14px
+  text-decoration: underline
+  float: left
   +box
   margin-top: 0
-  margin-left: 36px
 .button--specs
-  background: url(../img/specs-button_bg.png)
+  background: url(../img/specs-button_bg.png) no-repeat
   width: 240px
   height: 70px
-  color: #1e1e1e
+  color: #dcbe8c
   font-size: 36px
   font-family: 'pf_highway_sans_probold'
   +box
@@ -347,16 +348,26 @@ form
   display: inline-block
   padding: 20px 71px
   border: none
-  font-family: 'pf_highway_sans_prothin'
+  font-family: 'pf_highway_sans_probold'
   color: #ffffff
+  +single-text-shadow()
   +border-radius(4px)
   +background-clip(padding-box)
-  +box-shadow(inset 0 -4px 0 rgba(200,15,15,.75))
+  +box-shadow(inset 0 -4px 0 rgba(160,10,10,.75))
   +background-image(linear-gradient(to bottom, #ffa577 0%, #bd0909 100%))
   &:hover
-    background: lighten(#ffa577, 10%)
+    +background-image(linear-gradient(#bd0909 0%, #ffa577 100%))
     +box-shadow(0 0 0 0)
-
+.button--order
+  margin-top: 0
+  font-size: 30px
+  width: 220px
+  height: 70px
+  background: url(../img/order-button_bg.png) no-repeat
+  display: inline-block
+  font-family: 'pf_highway_sans_probold'
+  color: #000
+  +single-text-shadow()
 
 
 
